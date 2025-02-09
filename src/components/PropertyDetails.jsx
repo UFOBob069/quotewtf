@@ -46,11 +46,11 @@ export const PropertyDetails = ({ property }) => {
     };
   
     return (
-      <div id={`property-${id}`} className="bg-white rounded-lg shadow-lg p-6 mb-8 relative">
+      <div id={`property-${id}`} className="bg-white rounded-xl border-2 border-blue-200 shadow-lg p-6 mb-8 relative">
         {/* Enhanced Ranking Badge */}
-        <div className="absolute -top-4 -left-4 bg-gradient-to-br from-blue-500 to-blue-700 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_4px_12px_rgba(59,130,246,0.5)] z-20 transform hover:scale-105 transition-transform duration-200">
+        <div className="absolute -top-4 -left-4 bg-gradient-to-br from-purple-500 to-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_4px_12px_rgba(59,130,246,0.5)] z-20 transform hover:scale-105 transition-transform duration-200">
           <div className="text-center">
-            <div className="text-[10px] font-medium uppercase tracking-wider opacity-90">Rank</div>
+            <div className="text-[10px] font-medium uppercase tracking-wider opacity-90">Magic</div>
             <div className="text-2xl font-bold">{rank}</div>
           </div>
         </div>
@@ -70,11 +70,14 @@ export const PropertyDetails = ({ property }) => {
   
           {/* Right Column - Key Details */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 text-blue-900 pl-14">{title}</h2>
+            <h2 className="text-3xl font-bold mb-6 text-blue-600 pl-14">
+              <span className="mr-2">🏰</span>
+              {title}
+            </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">Pet Policy</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-xl">
+                <h3 className="text-lg font-semibold text-blue-600 mb-3">Vacation Details</h3>
                 <div className="space-y-1">
                   {petPolicy.split('\n').map((line, index) => (
                     line.trim() && (
@@ -87,8 +90,8 @@ export const PropertyDetails = ({ property }) => {
                 </div>
               </div>
   
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">Location</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-xl">
+                <h3 className="text-lg font-semibold text-blue-600 mb-3">Magical Location</h3>
                 <p className="font-medium text-gray-700 mb-2">{location.area}</p>
                 <p className="text-gray-700 mb-2">Walk to beach: {location.walkToDogBeach}</p>
                 <h4 className="font-semibold mb-2 text-blue-900">Nearby Attractions:</h4>
@@ -108,9 +111,9 @@ export const PropertyDetails = ({ property }) => {
                 href={vrboLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white text-center py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold"
+                className="inline-block bg-blue-600 text-white text-center py-2 px-6 rounded-xl hover:bg-blue-500 transition duration-300 font-semibold"
               >
-                Check Availability
+                Book Your Magical Stay
               </a>
 
               <div className="flex items-center gap-2">

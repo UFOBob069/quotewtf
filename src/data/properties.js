@@ -1,763 +1,781 @@
 // data/properties.js
 export const properties = [
     {
-      id: 1,
-      rank: 1,
-      rating: 5,
-reviews: 107,
-title: "Blue Coconut: Private Pool, 6-Seater Golf Cart, Steps to Beach",
-description: `
-    Blue Coconut is a luxury, high-end home with upscale furnishings and finishes. This stunning 8-bedroom, 7-bath home is located in the Crystal Beach neighborhood of Destin, FL, and sleeps up to 28 guests. 
-    
-    Enjoy an amazing backyard oasis complete with a private pool, large balconies, and a complimentary 6-passenger street-legal golf cart. The home is located just one block away from the beach, with a beach access gate right at the end of the street. With 10-foot ceilings on the first floor and vaulted ceilings on the second floor, the open-concept layout adds to its luxurious feel. 
-    
-    Nearby, you will find restaurants, a gas station, Destin Commons shopping mall, a Publix, Walgreens Pharmacy, and more, all within one mile.
-`,
-shortDescription: "Luxury 8-bedroom home with private pool, golf cart, and steps from the beach, perfect for large groups.",
-price: "From $399/night",
-bedrooms: 8,
-bathrooms: 7,
-sqft: 3600,
-maxGuests: 28,
-maxPets: 2,
-petFee: "$150 per pet per stay",
-amenities: [
-    "Private Pool with Heating Options",
-    "6-Seater Golf Cart Included",
-    "High-Speed WiFi",
-    "Fully-Stocked Kitchen",
-    "6 King Suites",
-    "2 Dedicated Bunk Rooms",
-    "Large Balconies (Front & Back)",
-    "Propane/Gas Grill",
-    "Iron and Ironing Board",
-    "Pack-n-Play Available",
-    "Short Distance to the Beach",
-    "Large Driveway Fits 6 Cars"
-],
-images: [
-    {
-        url: "/images/property1-main.jpg",
-        alt: "Luxury home exterior with private pool and golf cart"
+        id: 1,
+        rank: 1,
+        rating: 5,
+        reviews: 5,
+        title: "Spectacular! 9 Bedroom Disney & Universal Themed Home - Private Pool & Spa",
+        description: `
+        Experience the ultimate Orlando vacation at this **spacious 9-bedroom, 8-bathroom luxury home** in Four Corners, Florida. Designed for large groups and families, this **Disney & Universal-themed retreat** offers **a private pool, spa, and a game room**, ensuring non-stop entertainment for guests of all ages.
+        
+        This stunning 4,400 sq. ft. property comfortably accommodates **up to 24 guests** and features modern amenities, including **a fully equipped kitchen, large living areas, and themed bedrooms** inspired by your favorite attractions. Conveniently located just minutes from **Disney World, Universal Studios, and top Orlando attractions**, this home is perfect for an unforgettable getaway.
+        
+        Enjoy resort-style living with a **private heated pool and spa, BBQ grill, game room, and spacious lounging areas.** Nearby, you'll find top-rated golf courses, restaurants, and shopping centers for added convenience.
+        `,
+        shortDescription: "Luxury 9-bedroom vacation home near Disney & Universal with a private pool, spa, and themed game room.",
+        price: "From $399/night",
+        bedrooms: 9,
+        bathrooms: 8,
+        sqft: 4400,
+        maxGuests: 24,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Heated Pool & Spa",
+            "Game Room with Arcade & Themed Decor",
+            "Disney & Universal-Themed Bedrooms",
+            "Fully-Equipped Modern Kitchen",
+            "Spacious Living & Dining Areas",
+            "Smart TVs in Every Room",
+            "High-Speed WiFi",
+            "BBQ Grill & Outdoor Lounge",
+            "Washer & Dryer",
+            "Resort-Style Amenities",
+            "Free Parking"
+        ],
+        images: [
+            {
+                url: "/images/property1-main.jpg",
+                alt: "Luxury 9-bedroom vacation home with private pool near Disney"
+            },
+            {
+                url: "/images/property1-game-room.jpg",
+                alt: "Exciting game room with arcade games and themed decor"
+            }
+        ],
+        location: {
+            area: "Four Corners, Davenport, FL",
+            walkToAttractions: "Short drive to Disney & Universal",
+            nearbyAttractions: [
+                "Disney World (15 min drive)",
+                "Universal Studios (30 min drive)",
+                "Highland Reserve Golf Club (3 min drive)",
+                "Lake Davenport (5 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/3270398-dateless.seUJAaI",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     },
     {
-        url: "/images/property1-yard.jpg",
-        alt: "Spacious tropical backyard with pool and hammocks"
+        id: 2,
+        rank: 2,
+        rating: 5,
+        reviews: 42,
+        title: "Your Dream Vacation Awaits—Disney Magic & Comfort, Featured in WDW Magazine!",
+        description: `
+        Step into a **Disney & Universal-themed luxury home** designed for the ultimate **family vacation!** This **7-bedroom, 6-bathroom home** in Champions Gate offers a **private pool, spa, game room, and themed bedrooms** to make every moment magical.
+        
+        Spanning **3,700 sq. ft.** and sleeping **up to 19 guests**, this home is packed with immersive details, including a **private movie theater, arcade, and a Trolls-themed kids’ playroom**. Relax by the **heated pool and spa**, enjoy a BBQ, or head to the **Oasis Clubhouse**, which offers a lazy river, splash pad, waterslides, and more.
+        
+        Located just **15 minutes from Disney World** and close to Universal Studios, golf courses, and top dining, this vacation home is perfect for families, large groups, and Disney lovers seeking an unforgettable stay.
+        `,
+        shortDescription: "Luxury 7-bedroom Disney-themed home near Orlando with a private pool, spa, game room, and theater.",
+        price: "From $399/night",
+        bedrooms: 7,
+        bathrooms: 6,
+        sqft: 3700,
+        maxGuests: 19,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Heated Pool & Spa",
+            "Disney & Universal-Themed Bedrooms",
+            "Game Room with Arcade & Tube Slide",
+            "Movie Theater with 86-inch Screen & Dolby Atmos",
+            "BBQ Grill & Outdoor Lounge Area",
+            "Smart TVs in Every Room",
+            "High-Speed WiFi",
+            "Fully-Equipped Kitchen & Waffle Bar",
+            "Themed Kids’ Playroom with Slides",
+            "Washer & Dryer",
+            "Access to Champions Gate Resort Amenities",
+            "Free Parking"
+        ],
+        images: [
+            {
+                url: "/images/property2-main.jpg",
+                alt: "Luxury Disney-themed vacation home with private pool and spa"
+            },
+            {
+                url: "/images/property2-game-room.jpg",
+                alt: "Exciting game room with arcade games and themed decor"
+            }
+        ],
+        location: {
+            area: "Champions Gate, Davenport, FL",
+            walkToAttractions: "Short drive to Disney & Universal",
+            nearbyAttractions: [
+                "Disney World (15 min drive)",
+                "Universal Studios (30 min drive)",
+                "ChampionsGate Golf Club (7 min drive)",
+                "Highland Reserve Golf Club (6 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/2131097-dateless.OaZ8weB",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
+    }   
+    ,
+    {
+        id: 3,
+        rank: 3,
+        rating: 5,
+        reviews: 6,
+        title: "Disney Themed Resort Home | Game Room, Pool & Spa – Kissimmee, FL",
+        description: `
+        Experience a **magical Disney-themed getaway** in this **6-bedroom, 5-bathroom resort home** near Orlando! Located in a top-rated **Kissimmee resort**, this home offers a **private pool, spa, and game room**, perfect for families and groups seeking a fun-filled vacation.
+        
+        With **spacious interiors** and **themed bedrooms**, this home sleeps **up to 14 guests** and features a fully-equipped kitchen, high-speed WiFi, and a cozy living area for relaxing after theme park adventures. Enjoy resort-style amenities just minutes away from **Disney World, Universal Studios, and top attractions**.
+        
+        Whether you're lounging by the **private pool, enjoying arcade games in the game room, or exploring nearby entertainment**, this vacation rental offers the ultimate Orlando experience!
+        `,
+        shortDescription: "6-bedroom Disney-themed resort home with private pool, spa, and game room, minutes from Orlando attractions.",
+        price: "From $299/night",
+        bedrooms: 6,
+        bathrooms: 5,
+        sqft: 3200,
+        maxGuests: 14,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Pool & Spa",
+            "Disney-Themed Bedrooms",
+            "Game Room with Arcade Games",
+            "Fully-Equipped Kitchen",
+            "High-Speed WiFi",
+            "Smart TVs in Every Room",
+            "Outdoor Patio & Lounge Area",
+            "Resort-Style Amenities",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Universal"
+        ],
+        images: [
+            {
+                url: "/images/property3-main.jpg",
+                alt: "Disney-themed vacation home with private pool and game room"
+            },
+            {
+                url: "/images/property3-game-room.jpg",
+                alt: "Exciting game room with arcade games and fun decor"
+            }
+        ],
+        location: {
+            area: "Kissimmee, FL",
+            walkToAttractions: "Short drive to Disney & Universal",
+            nearbyAttractions: [
+                "Disney World (15 min drive)",
+                "Universal Studios (30 min drive)",
+                "Shingle Creek Regional Park (2 min walk)",
+                "Capone’s Dinner Show (6 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/3279430-dateless.7LFulZt",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     }
-],
-location: {
-    area: "Crystal Beach, Destin, FL",
-    walkToBeach: "1-2 Blocks",
-    nearbyAttractions: [
-        "Miramar Beach (7 min walk)",
-        "James Lee Beach (8 min walk)",
-        "Destin Commons (13 min walk)"
-    ]
-},
-vrboLink: "https://vrbo.com/affiliate/IElEq1T",
-petPolicy: `
-    Maximum 2 pets
-    $150 pet fee per pet per stay
-    Must be approved (submit weight, breed, and age for approval)
-    Pets must be house-trained
-    Current vaccination records required
-`
-    },
+        ,
+        {
+            id: 4,
+            rank: 4,
+            rating: 5,
+            reviews: 210,
+            title: "Disney Theme Rooms | Splashpad, Movie Theater & Private Pool – Kissimmee, FL",
+            description: `
+            Discover the ultimate **Disney-themed luxury retreat** in this **7-bedroom, 6-bathroom vacation home** in Four Corners, Kissimmee! Designed for **families and large groups**, this **spacious 4,000 sq. ft. home** offers an immersive **Disney experience with themed bedrooms, a private movie theater, and a resort-style splashpad**.
+            
+            Relax by the **private heated pool and spa**, enjoy the **game room and arcade**, or watch your favorite films in the **in-home movie theater**. Located just **8 minutes from Walt Disney World® Resort**, this home provides the perfect mix of fun and relaxation.
+            
+            Whether you're unwinding in the hot tub, exploring the nearby attractions, or making memories in the **Disney-inspired rooms**, this vacation rental is the ideal escape for theme park lovers of all ages!
+            `,
+            shortDescription: "7-bedroom Disney-themed home with private pool, movie theater, and splashpad, just minutes from Disney World.",
+            price: "From $449/night",
+            bedrooms: 7,
+            bathrooms: 6,
+            sqft: 4000,
+            maxGuests: 16,
+            maxPets: 2,
+            petFee: "$150 per pet per stay",
+            amenities: [
+                "Private Heated Pool & Spa",
+                "Disney-Themed Bedrooms",
+                "In-Home Movie Theater",
+                "Resort-Style Splashpad",
+                "Game Room with Arcade & Air Hockey",
+                "Outdoor Lounge & BBQ Grill",
+                "Fully-Equipped Kitchen",
+                "Smart TVs in Every Room",
+                "High-Speed WiFi",
+                "Washer & Dryer",
+                "Air Conditioning",
+                "Free Parking",
+                "Short Drive to Disney & Universal"
+            ],
+            images: [
+                {
+                    url: "/images/property4-main.jpg",
+                    alt: "Luxury Disney-themed vacation home with private pool and splashpad"
+                },
+                {
+                    url: "/images/property4-theater.jpg",
+                    alt: "Private in-home movie theater with plush seating"
+                }
+            ],
+            location: {
+                area: "Four Corners, Kissimmee, FL",
+                walkToAttractions: "Short drive to Disney & Universal",
+                nearbyAttractions: [
+                    "Walt Disney World® Resort (8 min drive)",
+                    "Universal Studios (25 min drive)",
+                    "Mystic Dunes Golf Club (4 min drive)",
+                    "Island H2O Live! Water Park (5 min drive)"
+                ]
+            },
+            vrboLink: "https://vrbo.com/affiliates/2525525-dateless.qnRD1Uq",
+            petPolicy: `
+            Maximum 2 pets  
+            $150 pet fee per pet per stay  
+            Must be approved (submit weight, breed, and age for approval)  
+            Pets must be house-trained  
+            Current vaccination records required
+            `
+        }       
+    ,
     {
-      id: 2,
-      rank: 2,
-      rating: 5,
-reviews: 27,
-title: "HUGE Luxury Home! Private Pool - Block to Beach - GameRoom - Rooftop Deck",
-description: `
-    DESTIN PARADISE is a luxurious, recently updated 6-bedroom, 6.5-bath home in the Crystal Beach neighborhood of Destin, FL. This spacious 4000 sq. ft. home accommodates up to 16 guests and features a private heated pool, a rooftop deck, and a game room. 
-    
-    Just a short 3-minute walk to the beach, this home offers a perfect blend of comfort and convenience. With 5 king beds and a dedicated bunk room, it's ideal for large families or groups. 
-    
-    Enjoy nearby shopping, restaurants, and entertainment, all within minutes of the home, including Destin Commons, Destin Harbor, and Crab Island.
-`,
-shortDescription: "Luxury 6-bedroom home with private pool, rooftop deck, and game room, just steps from the beach.",
-price: "From $530/night",
-bedrooms: 6,
-bathrooms: 6.5,
-sqft: 4000,
-maxGuests: 16,
-maxPets: 2,
-petFee: "$150 per pet per stay",
-amenities: [
-    "Private Heated Pool",
-    "Rooftop Deck",
-    "Game Room with Foosball & Arcade",
-    "5 King Beds & Bunk Room",
-    "High-Speed WiFi",
-    "Fully-Stocked Kitchen",
-    "Outdoor Dining Area",
-    "BBQ Grill",
-    "Laundry Room with Full-Sized Washer/Dryer",
-    "Beach Chairs & Towels Provided",
-    "Short Distance to the Beach",
-    "Large Driveway Fits 4 Cars"
-],
-images: [
+        id: 5,
+        rank: 5,
+        rating: 5,
+        reviews: 173,
+        title: "3 Miles to Disney! Themed Home | FREE Heated Pool & Spa, Theater & Grill",
+        description: `
+        Stay just **3 miles from Disney** in this **stunning 7-bedroom, 6-bathroom themed vacation home** in Kissimmee! Perfect for families and large groups, this **4,000 sq. ft. luxury retreat** offers a **FREE heated pool & spa, private movie theater, game room, and themed bedrooms** that bring the magic of Disney to your stay.
+        
+        Relax by the **private pool with a splash pad**, enjoy BBQ nights on the patio, or immerse yourself in the **in-home theater with surround sound**. Kids will love the **Disney-themed bedrooms**, while adults can unwind in the **spacious living areas** and **fully-equipped kitchen**.
+        
+        Located just **7 minutes from Walt Disney World® Resort**, this home is the **perfect getaway for theme park lovers**, offering resort-style amenities and top-tier comfort for an unforgettable vacation!
+        `,
+        shortDescription: "7-bedroom themed home with free heated pool, spa, theater, and grill, just 3 miles from Disney.",
+        price: "From $429/night",
+        bedrooms: 7,
+        bathrooms: 6,
+        sqft: 4000,
+        maxGuests: 16,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "FREE Heated Pool & Spa",
+            "Disney-Themed Bedrooms",
+            "In-Home Movie Theater",
+            "Splash Pad & Outdoor Lounge",
+            "Fully-Equipped Kitchen",
+            "Game Room with Arcade & Air Hockey",
+            "BBQ Grill & Patio Seating",
+            "Smart TVs in Every Room",
+            "High-Speed WiFi",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Universal"
+        ],
+        images: [
+            {
+                url: "/images/property5-main.jpg",
+                alt: "Luxury themed vacation home with free heated pool and spa"
+            },
+            {
+                url: "/images/property5-theater.jpg",
+                alt: "Private in-home movie theater with plush seating"
+            }
+        ],
+        location: {
+            area: "Four Corners, Kissimmee, FL",
+            walkToAttractions: "Short drive to Disney & Universal",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (7 min drive)",
+                "Universal Studios (25 min drive)",
+                "Mystic Dunes Golf Club (4 min drive)",
+                "Island H2O Live! Water Park (5 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/2495516-dateless.kS0ZiRd",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
+    }   
+    ,
     {
-        url: "/images/property2-main.jpg",
-        alt: "Luxury home exterior with private pool and rooftop deck"
-    },
-    {
-        url: "/images/property2-yard.jpg",
-        alt: "Spacious backyard with pool and lounge chairs"
-    }
-],
-location: {
-    area: "Crystal Beach, Destin, FL",
-    walkToBeach: "3 Minutes",
-    nearbyAttractions: [
-        "Miramar Beach (3 min walk)",
-        "Shore at Crystal Beach Park (9 min walk)",
-        "Destin Commons (13 min walk)"
-    ]
-},
-vrboLink: "https://vrbo.com/affiliate/JzbBBYJ",
-petPolicy: `
-    Maximum 2 dogs under 50 lbs
-    $150 pet fee per pet per stay
-    Must be approved (submit weight, breed, and age for approval)
-    Pets must be house-trained
-    Current vaccination records required
-`
+        id: 6,
+        rank: 6,
+        rating: 4.9,
+        reviews: 99,
+        title: "Spacious 8-Bedroom | 3 Miles to Disney | Themed Rooms & Golfers' Dream",
+        description: `
+        Stay just **3 miles from Disney** in this **spacious 8-bedroom, 6-bathroom vacation home** in Kissimmee! Designed for families, golfers, and theme park lovers, this **3,500 sq. ft. retreat** features **Disney and Toy Story-themed bedrooms, a private pool & spa, and a fully-equipped game room** with arcade games.
+        
+        Enjoy the **private heated pool and spa**, relax in the outdoor lounge, or challenge friends in the **game room with Pac-Man & Street Fighter arcades**. Golf enthusiasts will love the proximity to **Mystic Dunes Golf Club** and other top courses.
+        
+        Located just **11 minutes from Walt Disney World® Resort**, this home offers the perfect balance of excitement and relaxation, making it ideal for **large groups and families** looking for an unforgettable getaway!
+        `,
+        shortDescription: "8-bedroom home with themed rooms, private pool, spa, and game room, just 3 miles from Disney.",
+        price: "From $449/night",
+        bedrooms: 8,
+        bathrooms: 6,
+        sqft: 3500,
+        maxGuests: 19,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Heated Pool & Spa",
+            "Themed Bedrooms (Disney, Toy Story, Minions)",
+            "Game Room with Pac-Man & Street Fighter Arcades",
+            "BBQ Grill & Outdoor Lounge",
+            "Fully-Equipped Kitchen",
+            "High-Speed WiFi",
+            "Smart TVs in Every Room",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Golf Courses"
+        ],
+        images: [
+            {
+                url: "/images/property6-main.jpg",
+                alt: "Spacious 8-bedroom vacation home with private pool near Disney"
+            },
+            {
+                url: "/images/property6-game-room.jpg",
+                alt: "Exciting game room with arcade games and fun decor"
+            }
+        ],
+        location: {
+            area: "Four Corners, Kissimmee, FL",
+            walkToAttractions: "Short drive to Disney & Golf Courses",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (11 min drive)",
+                "Universal Studios (30 min drive)",
+                "Mystic Dunes Golf Club (10 min drive)",
+                "Island H2O Live! Water Park (9 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/1571737-dateless.klTfbRE",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     }
     ,
     {
-      id: 3,
-      rank: 3,
-      rating: 5,
-reviews: 61,
-title: "Across Beach, Pool, Pool Table, Ping Pong, Golf Cart Rental, Amazing Yard, 7 BR",
-description: `
-    Escape to 'Emerald Oasis' - a stunning 7-bedroom, 5.5-bath luxury beach home located across the street from the Gulf of Mexico. This spacious 3006 sq. ft. home accommodates up to 18 guests and features a private heated pool, cabana house, and a fantastic outdoor entertainment area.
-    
-    Just a short 2-minute walk to the beach, this home is perfect for large families or groups. It offers an outdoor pool table, ping pong table, foosball table, cornhole, a fire pit, and plenty of seating. 
-    
-    Conveniently located within walking distance to restaurants, shopping, and coffee shops, it provides everything needed for a relaxing beach vacation.
-`,
-shortDescription: "Luxury 7-bedroom home with private pool, game area, and steps from the beach.",
-price: "From $378/night",
-bedrooms: 7,
-bathrooms: 5.5,
-sqft: 3006,
-maxGuests: 18,
-maxPets: 1,
-petFee: "$150 per pet per stay",
-amenities: [
-    "Private Heated Pool",
-    "Pool Table, Ping Pong, & Foosball",
-    "Golf Cart Rental Available",
-    "High-Speed WiFi",
-    "Fully-Stocked Kitchen with 3 Refrigerators",
-    "Outdoor Fire Pit & BBQ Grill",
-    "Laundry Room with Full-Sized Washer/Dryer",
-    "Beach Chairs, Umbrella & Wagon Provided",
-    "Short Distance to the Beach",
-    "Spacious Outdoor Seating & Dining Area",
-    "Large Driveway Fits 4 Cars"
-],
-images: [
-    {
-        url: "/images/property3-main.jpg",
-        alt: "Luxury home exterior with private pool and entertainment area"
-    },
-    {
-        url: "/images/property3-yard.jpg",
-        alt: "Spacious backyard with pool, outdoor seating, and games"
-    }
-],
-location: {
-    area: "Crystal Beach, Destin, FL",
-    walkToBeach: "2 Minutes",
-    nearbyAttractions: [
-        "Shore at Crystal Beach Park (2 min walk)",
-        "Miramar Beach (2 min walk)",
-        "Henderson Beach State Park (5 min walk)"
-    ]
-},
-vrboLink: "https://vrbo.com/affiliates/2201893-dateless.BqizMBw",
-petPolicy: `
-    Maximum 1 dog under 50 lbs
-    $150 pet fee per pet per stay
-    Must be approved (submit weight, breed, and age for approval)
-    Pets must be house-trained
-    Current vaccination records required
-`
-    }
-    ,
-    {
-      id: 4,
-      rank: 4,
-      rating: 5,
-      reviews: 85,
-      title: "Quiet Family Neighborhood | Resort Pool | Golf Cart Free",
-      description: `
-          Welcome to Paradise in Destiny – a stunning lakefront 4-bedroom, 3-bath luxury home located in one of Destin’s most exclusive neighborhoods. This spacious 2955 sq. ft. home accommodates up to 10 guests and offers breathtaking views of Destin Lake, high-end finishes, and resort-style amenities.
-          
-          Enjoy access to the Destiny Yacht Clubhouse with a heated pool, hot tub, fitness center, and tennis courts. A complimentary golf cart makes beach trips effortless. 
-          
-          Conveniently located near top-rated restaurants, shopping, and outdoor activities, this home is perfect for families or groups seeking relaxation and adventure.
-      `,
-      shortDescription: "Luxury 4-bedroom home with resort pool, lakefront views, and complimentary golf cart.",
-      price: "From $507/night",
-      bedrooms: 4,
-      bathrooms: 3,
-      sqft: 2955,
-      maxGuests: 10,
-      maxPets: 2,
-      petFee: "$150 per pet per stay",
-      amenities: [
-          "Lakefront Views",
-          "Resort Pool & Hot Tub",
-          "Complimentary Golf Cart",
-          "High-Speed WiFi",
-          "Fully-Stocked Kitchen with Wet Bar",
-          "Foosball Table",
-          "Laundry Room with Full-Sized Washer/Dryer",
-          "Beach Chairs & Toys Provided",
-          "Spacious Outdoor Seating & Dining Area",
-          "Access to Fitness Center & Tennis Courts",
-          "Large Driveway Fits Multiple Cars"
-      ],
-      images: [
-          {
-              url: "/images/property4-main.jpg",
-              alt: "Luxury home exterior with lakefront views and golf cart"
-          },
-          {
-              url: "/images/property4-yard.jpg",
-              alt: "Spacious backyard with outdoor seating and fire pit"
-          }
-      ],
-      location: {
-          area: "Destiny, Destin, FL",
-          walkToBeach: "19 Minutes",
-          nearbyAttractions: [
-              "James Lee Park (19 min walk)",
-              "Miramar Beach (19 min walk)",
-              "James Lee Beach (9 min drive)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliates/1822563-dateless.lBcrlyA",
-      petPolicy: `
-          Maximum 2 dogs
-          $150 pet fee per pet per stay
-          Must be approved (submit weight, breed, and age for approval)
-          Pets must be house-trained
-          Current vaccination records required
-      `      
+        id: 7,
+        rank: 7,
+        rating: 5,
+        reviews: 49,
+        title: "5-Bedroom Disney-Themed Home | Family Resort, Game Room & Pool – Davenport, FL",
+        description: `
+        Experience **Disney magic** in this **5-bedroom, 5-bathroom themed vacation home** in a top-rated **family resort community** near Orlando! Perfect for families and groups, this **spacious 2,416 sq. ft. home** features **themed bedrooms, a private game room, and resort-style amenities**.
+        
+        Kids will love the **Toy Story bedroom with a slide & ball pit, the Star Wars LED-lit room, and the Beauty and the Beast suite**. The home includes a **fully-equipped kitchen, cozy living room with an electric fireplace, and an outdoor lounge area**. Guests also have access to **resort pools, fitness center, and more**.
+        
+        Located just **minutes from Disney World and top golf courses**, this home is the perfect **family-friendly getaway** with something for everyone!
+        `,
+        shortDescription: "5-bedroom Disney-themed resort home with game room, pool, and fun family features near Orlando.",
+        price: "From $299/night",
+        bedrooms: 5,
+        bathrooms: 5,
+        sqft: 2416,
+        maxGuests: 14,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Disney-Themed Bedrooms",
+            "Game Room with Arcade & Family Games",
+            "Toy Story Room with Slide & Ball Pit",
+            "Fully-Equipped Kitchen",
+            "Smart TVs in Every Room",
+            "High-Speed WiFi",
+            "Outdoor Lounge & BBQ Area",
+            "Washer & Dryer",
+            "Electric Fireplace",
+            "Air Conditioning",
+            "Resort-Style Amenities (Pool, Gym, Playground)",
+            "Free Parking",
+            "Short Drive to Disney & Golf Courses"
+        ],
+        images: [
+            {
+                url: "/images/property7-main.jpg",
+                alt: "5-bedroom Disney-themed home in a family resort with game room and pool"
+            },
+            {
+                url: "/images/property7-bedroom.jpg",
+                alt: "Themed Toy Story bedroom with slide and ball pit"
+            }
+        ],
+        location: {
+            area: "Davenport, FL",
+            walkToAttractions: "Short drive to Disney & Golf Courses",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (15 min drive)",
+                "Universal Studios (35 min drive)",
+                "ChampionsGate Golf Club (8 min drive)",
+                "Reunion Resort Golf Course (14 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/3189325-dateless.je0KcWG",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     }
     ,
     {
-      id: 5,
-      rank: 5,
-      rating: 10,
-      reviews: 74,
-      title: "FALL & HOLIDAYS Available! 5 bdrm, 4 bath - Private Pool, Lounge&Dining Area",
-      description: `
-          DEJA BLUE is a beautifully designed 5-bedroom, 4-bath home with a private pool, outdoor lounge, and dining area located in Crystal Beach, Destin, FL. This 2242 sq. ft. home comfortably sleeps up to 16 guests and is perfect for family vacations or group getaways.
-          
-          Just a 4-minute walk to the beach, this home is designed for relaxation with multiple outdoor areas, a rooftop patio, and a fully stocked kitchen. Enjoy modern entertainment options, including Roku, Hulu, and YouTube TV, along with a selection of board games for family fun.
-          
-          Nearby shopping, dining, and entertainment make this an ideal spot for a memorable beach getaway.
-      `,
-      shortDescription: "Luxury 5-bedroom home with private pool, outdoor lounge, and dining area near the beach.",
-      price: "From $613/night",
-      bedrooms: 5,
-      bathrooms: 4,
-      sqft: 2242,
-      maxGuests: 16,
-      maxPets: 1,
-      petFee: "$150 per pet per stay",
-      amenities: [
-          "Private Heated Pool",
-          "Outdoor Lounge & Dining Area",
-          "Rooftop Patio",
-          "High-Speed WiFi",
-          "Fully-Stocked Kitchen",
-          "Laundry Room with Full-Sized Washer/Dryer",
-          "Beach Chairs, Cart & Toys Provided",
-          "Board Games & Entertainment",
-          "Smart TVs with Streaming Services",
-          "Close to Shopping & Dining",
-          "Large Driveway Fits Multiple Cars"
-      ],
-      images: [
-          {
-              url: "/images/property5-main.jpg",
-              alt: "Luxury home exterior with private pool and outdoor lounge area"
-          },
-          {
-              url: "/images/property5-yard.jpg",
-              alt: "Spacious backyard with pool and covered seating"
-          }
-      ],
-      location: {
-          area: "Crystal Beach, Destin, FL",
-          walkToBeach: "4 Minutes",
-          nearbyAttractions: [
-              "Shore at Crystal Beach Park (4 min walk)",
-              "Miramar Beach (4 min walk)",
-              "Destin Commons (10 min walk)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliates/1037133-dateless.7hYBaVA",
-      petPolicy: `
-          Maximum 1 dog
-          $150 pet fee per pet per stay
-          Must be approved (submit weight, breed, and age for approval)
-          Pets must be house-trained
-          Current vaccination records required
-      `      
+        id: 8,
+        rank: 8,
+        rating: 4.8,
+        reviews: 33,
+        title: "Disney-Themed 5BR Home | Game Room, Pool & Hot Tub – Davenport, FL",
+        description: `
+        Escape to this **Disney-themed 5-bedroom, 5-bathroom vacation home** in Davenport, FL! Perfect for families and groups, this spacious retreat offers **a private pool, hot tub, and an exciting game room** for nonstop fun.
+        
+        Enjoy the fully-equipped **chef’s kitchen, themed bedrooms, and open-concept living space** designed for comfort. Kids will love the **game room**, while adults can relax in the **outdoor lounge area** or soak in the **hot tub**.
+        
+        Located just **minutes from Disney World, Universal Studios, and top golf courses**, this home provides the ultimate mix of magic, relaxation, and adventure!
+        `,
+        shortDescription: "5-bedroom Disney-themed home with private pool, hot tub, and game room near Orlando attractions.",
+        price: "From $279/night",
+        bedrooms: 5,
+        bathrooms: 5,
+        sqft: 2800,
+        maxGuests: 12,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Pool & Hot Tub",
+            "Disney-Themed Bedrooms",
+            "Game Room with Arcade & Family Games",
+            "Fully-Equipped Kitchen",
+            "High-Speed WiFi",
+            "Smart TVs in Every Room",
+            "Outdoor Lounge & BBQ Area",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Golf Courses"
+        ],
+        images: [
+            {
+                url: "/images/property8-main.jpg",
+                alt: "Disney-themed 5-bedroom vacation home with private pool and hot tub"
+            },
+            {
+                url: "/images/property8-game-room.jpg",
+                alt: "Exciting game room with arcade games and fun decor"
+            }
+        ],
+        location: {
+            area: "Davenport, FL",
+            walkToAttractions: "Short drive to Disney & Golf Courses",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (15 min drive)",
+                "Universal Studios (35 min drive)",
+                "ChampionsGate Golf Club (8 min drive)",
+                "Reunion Resort Golf Course (14 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/3404244-dateless.e4z32dW",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     }
     ,
     {
-      id: 6,
-      rank: 6,
-      rating: 4.8,
-reviews: 70,
-title: "ADORABLE DESTIN BEACH COTTAGE! 1 min walk to beach! Gulf View! Private Pool!",
-description: `
-    This charming 3-bedroom, 3-bath Destin beach cottage is perfect for a relaxing getaway. Located just a 1-minute walk from the beach, this 2100 sq. ft. home offers stunning Gulf views, a private pool, and access to a community pool across the street.
-    
-    Situated in the family-friendly Crystal Beach neighborhood, this home features spacious outdoor living areas, a charcoal grill, and a well-equipped kitchen. Enjoy nearby shopping, restaurants, and entertainment, making it an ideal destination for a beach vacation.
-`,
-shortDescription: "Charming 3-bedroom beach cottage with Gulf views, private pool, and 1-minute walk to the beach.",
-price: "From $312/night",
-bedrooms: 3,
-bathrooms: 3,
-sqft: 2100,
-maxGuests: 8,
-maxPets: 1,
-petFee: "$150 per pet per stay",
-amenities: [
-    "Private Pool",
-    "Gulf View",
-    "Community Pool Access",
-    "High-Speed WiFi",
-    "Fully-Stocked Kitchen",
-    "Laundry Room with Washer/Dryer",
-    "Charcoal Grill",
-    "Beach Chairs & Toys Provided",
-    "Spacious Outdoor Seating & Dining Area",
-    "Close to Shopping & Restaurants",
-    "Parking for 2 Cars"
-],
-images: [
-    {
-        url: "/images/property6-main.jpg",
-        alt: "Charming beach cottage exterior with private pool and Gulf view"
-    },
-    {
-        url: "/images/property6-yard.jpg",
-        alt: "Spacious backyard with pool and outdoor seating"
-    }
-],
-location: {
-    area: "Crystal Beach, Destin, FL",
-    walkToBeach: "1 Minute",
-    nearbyAttractions: [
-        "Shore at Crystal Beach Park (2 min walk)",
-        "Miramar Beach (2 min walk)",
-        "Henderson Beach State Park (9 min walk)"
-    ]
-},
-vrboLink: "https://vrbo.com/affiliates/1938195-dateless.SvsrI1R",
-petPolicy: `
-    Maximum 1 dog
-    $150 pet fee per pet per stay
-    Must be approved (submit weight, breed, and age for approval)
-    Pets must be house-trained
-    Current vaccination records required
-`
-
-    }
-
-    ,
-    {
-      id: 7,
-      rank: 7,
-      rating: 4.9,
-reviews: 68,
-title: "Harborside by AvantStay | Expansive Destin Retreat",
-description: `
-    Experience luxury at Harborside, an expansive 7-bedroom, 7.5-bath retreat on the Destin Harbor. With 4,703 sq. ft. of living space, this home is perfect for large groups and families. Enjoy the private pool, multiple outdoor lounging areas, and unbeatable water views. 
-    
-    This home features two spacious living rooms, a modern fully-stocked kitchen, and ensuite bathrooms for every bedroom. The lower level boasts a ping pong table for added entertainment, while the upper patio includes a BBQ grill and outdoor dining area. 
-    
-    Located just a 4-minute walk from Destin Beach, you’ll have access to world-class dining, shopping, and entertainment. A golf cart rental is available for added convenience. 
-`,
-shortDescription: "Expansive 7-bedroom harborfront retreat with private pool and multiple patios.",
-price: "From $624/night",
-bedrooms: 7,
-bathrooms: 7.5,
-sqft: 4703,
-maxGuests: 18,
-maxPets: 2,
-petFee: "$150 per pet per stay",
-amenities: [
-    "Private Pool",
-    "Harbor Views",
-    "Outdoor Dining & BBQ Grill",
-    "Two Spacious Living Rooms",
-    "Fully-Stocked Modern Kitchen",
-    "Laundry Room with Washer/Dryer",
-    "Ping Pong Table",
-    "Beach Gear Rental Credit Included",
-    "Golf Cart Rental Available",
-    "Parking for 8 Cars"
-],
-images: [
-    {
-        url: "/images/property7-main.jpg",
-        alt: "Luxury harborfront home with private pool and spacious patios"
-    },
-    {
-        url: "/images/property7-patio.jpg",
-        alt: "Outdoor seating area with harbor views"
-    }
-],
-location: {
-    area: "Destin Harbor, Destin, FL",
-    walkToBeach: "4 Minutes",
-    nearbyAttractions: [
-        "Destin Harbor (1 min walk)",
-        "Big Kahuna’s Water Park (3 min drive)",
-        "Destin Commons Shopping (10 min drive)"
-    ]
-},
-vrboLink: "https://vrbo.com/affiliates/3248080-dateless.bOqiSHM",
-petPolicy: `
-    Maximum 2 dogs
-    $150 pet fee per pet per stay
-    Must be approved (submit weight, breed, and age for approval)
-    Pets must be house-trained
-    Current vaccination records required
-`
-
-
-    }
-
-    ,
-    {
-      id: 8,
-      rank: 8,
-      rating: 5,
-      reviews: 63,
-      title: "Fully Loaded! Stroll to Beach, Perfect Location",
-      description: `
-          Welcome to The Crystal Canary, a fully-loaded 4-bedroom, 3.5-bath vacation paradise in the gated Villages of Crystal Beach. This home is perfect for extended families, offering comfort, convenience, and proximity to Destin’s best attractions.
-          
-          Located just a short 10-minute stroll or a seasonal trolley ride to the pristine white sand beaches, this home is packed with thoughtful amenities. Enjoy the chef’s kitchen, two King master suites, and a kid-friendly bunk room. The resort-style pool with waterfalls and a hot tub is just steps from the front door.
-          
-          Families will love the included beach gear, baby essentials, and dog-friendly accommodations. With shopping, dining, and entertainment just minutes away, this is the ultimate Destin retreat!
-      `,
-      shortDescription: "Spacious 4-bedroom home with resort-style pool, near beach & shopping.",
-      price: "From $507/night",
-      bedrooms: 4,
-      bathrooms: 3.5,
-      sqft: 2040,
-      maxGuests: 12,
-      maxPets: 1,
-      petFee: "$200 per pet per stay",
-      amenities: [
-          "Resort-Style Heated Pool & Hot Tub",
-          "Chef’s Kitchen",
-          "Two King Master Suites",
-          "Kid-Friendly Bunk Room",
-          "Beach Gear Included (Chairs, Umbrellas, Wagon, Cooler)",
-          "Baby & Toddler Essentials Provided",
-          "Smart TVs in Every Room",
-          "Full-Size Washer/Dryer",
-          "Gated Community with Free Seasonal Trolley to Beach",
-          "Parking for 2 Cars"
-      ],
-      images: [
-          {
-              url: "/images/property8-main.jpg",
-              alt: "Spacious home with resort-style pool near Destin beach"
-          },
-          {
-              url: "/images/property-crystalcanary-living.jpg",
-              alt: "Cozy living area with plush seating and Smart TV"
-          }
-      ],
-      location: {
-          area: "Villages of Crystal Beach, Destin, FL",
-          walkToBeach: "10 Minutes",
-          nearbyAttractions: [
-              "Destin Commons (7 min walk)",
-              "Big Kahuna’s Water Park (9 min drive)",
-              "Henderson Beach State Park (5 min drive)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliates/2574750-dateless.cdgQkCn",
-      petPolicy: `
-          One dog under 25 lbs allowed
-          $200 pet fee per stay
-          Must be crated when left alone
-          Up-to-date vaccination records required
-          No cats allowed
-      `
-
-    }
-
-    ,
-    {
-      id: 9,
-      rank: 9,
-      rating: 5,
-      reviews: 61,
-      title: "Cutest Cottage in Crystal Beach! Private Pool, Tesla/EV Charger, Close to Beach",
-      description: `
-          Welcome to Sandy Toes, an updated 2-bedroom, 2-bath cottage in the heart of Crystal Beach, Destin. Just a block from the white sand beach, this charming home offers a perfect blend of coastal elegance and modern amenities.
-          
-          Enjoy a private backyard oasis featuring a pool (heating available), screened-in porch, and lush landscaping. Inside, find two King bedrooms, an open living and dining space, and a fully stocked custom kitchen with stainless steel appliances. A 50-amp Tesla/EV charger is available for eco-conscious travelers.
-          
-          Ideal for small families or couples, this pet-friendly retreat includes beach gear, high-speed WiFi, and Smart TVs in every room. Conveniently located near top shopping, dining, and attractions, Sandy Toes is your perfect Crystal Beach getaway!
-      `,
-      shortDescription: "Charming 2-bedroom cottage with private pool & EV charger, steps to the beach.",
-      price: "From $471/night",
-      bedrooms: 2,
-      bathrooms: 2,
-      sqft: 1200,
-      maxGuests: 6,
-      maxPets: 2,
-      petFee: "$300 per pet per stay",
-      amenities: [
-          "Private Heated Pool",
-          "Two King Bedrooms",
-          "EV Charger (Tesla & Universal J1772)",
-          "Fully Equipped Custom Kitchen",
-          "Large Screened-in Porch",
-          "Beach Gear Included (Chairs, Umbrella, Cart)",
-          "High-Speed WiFi & Smart TVs",
-          "Full-Size Washer/Dryer",
-          "Outdoor Gas Grill & Dining Area",
-          "Parking for 3 Vehicles"
-      ],
-      images: [
-          {
-              url: "/images/property9-main.jpg",
-              alt: "Cozy beach cottage with private pool near Crystal Beach"
-          },
-          {
-              url: "/images/property-sandytoes-living.jpg",
-              alt: "Bright and airy living room with coastal decor"
-          }
-      ],
-      location: {
-          area: "Crystal Beach, Destin, FL",
-          walkToBeach: "5 Minutes",
-          nearbyAttractions: [
-              "Destin Commons (7 min walk)",
-              "Henderson Beach State Park (8 min walk)",
-              "Silver Sands Premium Outlets (15 min drive)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliates/1321317-dateless.KaJr5Nd",
-      petPolicy: `
-          Up to 2 dogs allowed (under 50 lbs each)
-          $300 pet fee per pet, per stay
-          Must be crated when left alone
-          No cats allowed
-          Guests responsible for cleaning up after pets
-      `
-      
-    }
-
-    ,
-    {
-      id: 10,
-      rank: 10,
-      rating: 5,
-      reviews: 156,
-      title: "'Sand Dollar' Gorgeous 6 Bed, Beach Service, Heated Pool & 6 Seat Golf cart!",
-      description: `
-          Welcome to "Sand Dollar," your luxurious 6-bedroom, 4-bath retreat in Crystal Beach, Destin. Just a short walk from the pristine shoreline, this home offers everything you need for an unforgettable beach getaway.
-          
-          Relax in style with an oversized private heated pool, spacious outdoor dining areas, and a lush backyard with a rainfall outdoor shower. The home includes a 6-seat golf cart, complimentary beach service with commercial-grade chairs and umbrellas (March-October), and a fully stocked chef’s kitchen with quartzite countertops and high-end KitchenAid appliances.
-          
-          Designed for comfort and elegance, Sand Dollar features an open floor plan, two master suites, and a charming guest cottage with a kitchenette. The home is fully stocked with beach gear, bikes, ping pong, and cornhole for endless entertainment. 
-          
-          Conveniently located near shopping, dining, and attractions, this pet-friendly home is the perfect spot for family vacations or group getaways in Destin!
-      `,
-      shortDescription: "Luxury 6-bedroom beach retreat with private heated pool & golf cart, steps to the beach.",
-      price: "From $962/night",
-      bedrooms: 6,
-      bathrooms: 4,
-      sqft: 4000,
-      maxGuests: 16,
-      maxPets: 2,
-      petFee: "$300 per pet per stay",
-      amenities: [
-          "Private Heated Pool",
-          "6-Seat Golf Cart Included",
-          "Beach Service (March-October)",
-          "Two Master Suites",
-          "Fully Equipped Chef’s Kitchen",
-          "Guest Cottage with Kitchenette",
-          "Bikes, Ping Pong, & Cornhole",
-          "High-Speed WiFi & Smart TVs",
-          "Outdoor Gas Grill & Dining Area",
-          "Parking for 3 Vehicles"
-      ],
-      images: [
-          {
-              url: "/images/property10-main.jpg",
-              alt: "Elegant beach home with private pool and lush landscaping"
-          },
-          {
-              url: "/images/property-sanddollar-living.jpg",
-              alt: "Spacious and beautifully designed living room with coastal decor"
-          }
-      ],
-      location: {
-          area: "Crystal Beach, Destin, FL",
-          walkToBeach: "3 Minutes",
-          nearbyAttractions: [
-              "Destin Commons (5 min drive)",
-              "Henderson Beach State Park (8 min walk)",
-              "Silver Sands Premium Outlets (15 min drive)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliates/35092-dateless.yXVSdex",
-      petPolicy: `
-          Up to 2 dogs allowed (prior approval required)
-          $300 pet fee per pet, per stay
-          Must be crated when left alone
-          No cats allowed
-          Guests responsible for cleaning up after pets
-      `
-      
-
+        id: 9,
+        rank: 9,
+        rating: 4.9,
+        reviews: 185,
+        title: "Disney Themed Estate | Pool & Spa | Movie & Game Room – Kissimmee, FL",
+        description: `
+        Step into a **Disney-inspired dream getaway** in this **7-bedroom, 5-bathroom luxury estate** in Kissimmee, FL! Designed for **families and large groups**, this **spacious 2,827 sq. ft. home** features **themed bedrooms, a Star Wars movie theater, and a private pool & spa** for an unforgettable vacation.
+        
+        Experience **a Hogwarts adventure in the Harry Potter room, a winter wonderland in the Frozen suite, and fairy-tale elegance in the Beauty and the Beast bedroom**. Enjoy movie nights in the **Star Wars-themed theater** or challenge friends in the **game room with arcade classics**.
+        
+        Just **10 minutes from Walt Disney World® Resort**, this estate offers the **perfect mix of magic and relaxation**, making it ideal for **Disney lovers, families, and groups** seeking an immersive Orlando experience!
+        `,
+        shortDescription: "7-bedroom Disney-themed estate with private pool, spa, movie theater, and game room near Orlando.",
+        price: "From $499/night",
+        bedrooms: 7,
+        bathrooms: 5,
+        sqft: 2827,
+        maxGuests: 20,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Heated Pool & Spa",
+            "Star Wars-Themed Movie Theater",
+            "Harry Potter, Frozen & Disney-Themed Bedrooms",
+            "Game Room with Arcade & Family Games",
+            "Fully-Equipped Kitchen",
+            "Smart TVs in Every Room",
+            "High-Speed WiFi",
+            "Outdoor Lounge & BBQ Grill",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Golf Courses"
+        ],
+        images: [
+            {
+                url: "/images/property9-main.jpg",
+                alt: "Luxury Disney-themed estate with private pool, spa, and movie theater"
+            },
+            {
+                url: "/images/property9-theater.jpg",
+                alt: "Star Wars-themed movie theater with plush seating and large screen"
+            }
+        ],
+        location: {
+            area: "Four Corners, Kissimmee, FL",
+            walkToAttractions: "Short drive to Disney & Universal",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (10 min drive)",
+                "Universal Studios (30 min drive)",
+                "Mystic Dunes Golf Club (7 min drive)",
+                "Island H2O Live! Water Park (8 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/vrbo-usa.ksMVfz5",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     }
     ,
     {
-      id: 11,
-      rank: 11,
-      rating: 4.9,
-      reviews: 127,
-      title: "Just a 60 Second Walk to Sugar White Sands!",
-      description: `
-          Welcome to our beautiful 4-bedroom, 2-bath Destin Beach home, perfectly located in the charming Crystal Beach neighborhood, just steps from the sugar-white sands and turquoise waters.
-          
-          This cozy and spacious retreat features an open floor plan with a fully equipped kitchen, a comfortable family room with a 50'' plasma TV, and multiple outdoor spaces, including a deck, balcony, and patio. The home comfortably sleeps up to 10 guests and includes a tower loft with breathtaking 360-degree views of the Gulf and Destin area.
-          
-          Enjoy the convenience of being just three homes away from the beach, making it easy to access the shoreline without waiting for shuttles or packing up for the day. The property is also minutes from Destin Commons, shopping, restaurants, water parks, and family-friendly attractions. 
-          
-          Whether you're planning a family vacation or a relaxing beach getaway, this home offers the perfect location and amenities for your stay.
-      `,
-      shortDescription: "Cozy 4-bedroom beach home, steps to the sand with a spacious layout & great location.",
-      price: "From $215/night",
-      bedrooms: 4,
-      bathrooms: 2,
-      sqft: "Not specified",
-      maxGuests: 10,
-      maxPets: "With prior approval",
-      petFee: "Varies; approval required",
-      amenities: [
-          "Steps to the Beach (60-Second Walk)",
-          "Spacious Open Floor Plan",
-          "Fully Equipped Kitchen",
-          "Tower Loft with Gulf Views",
-          "Outdoor Deck & Patio",
-          "Comfortable Living Room with 50'' TV",
-          "Pet-Friendly (With Approval)",
-          "Parking for 3 Vehicles"
-      ],
-      images: [
-          {
-              url: "/images/property11-main.jpg",
-              alt: "Exterior of cozy beach home just steps from the ocean"
-          },
-          {
-              url: "/images/property-barracuda-living.jpg",
-              alt: "Spacious living room with comfortable seating and TV"
-          }
-      ],
-      location: {
-          area: "Crystal Beach, Destin, FL",
-          walkToBeach: "60 Seconds",
-          nearbyAttractions: [
-              "Destin Commons (12 min walk)",
-              "Henderson Beach State Park (8 min walk)",
-              "Silver Sands Premium Outlets (15 min drive)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliates/212033-dateless.Lcv9qIP",
-      petPolicy: `
-          Pets may be allowed with prior approval
-          Additional pet fees may apply
-          Guests responsible for cleaning up after pets
-      `
-      
-
+        id: 10,
+        rank: 10,
+        rating: 5,
+        reviews: 40,
+        title: "Brand New 9BR Themed Home | Private Pool, Spa & Game Room – Kissimmee, FL",
+        description: `
+        Enjoy a **luxurious stay just minutes from Disney** in this **brand-new 9-bedroom, 6-bathroom themed vacation home** in Kissimmee! Perfect for **large groups and families**, this **spacious 4,000 sq. ft. retreat** features a **private heated pool & spa, game room, and beautifully designed themed bedrooms**.
+        
+        Guests will love the **fully-equipped kitchen, open-concept living spaces, and outdoor lounge area**. The game room offers **arcade games and entertainment for all ages**, while the **private pool and spa** provide the perfect place to relax after a day at the parks.
+        
+        Located just **a short drive from Walt Disney World® Resort, Universal Studios, and local attractions**, this home is ideal for a **magical Orlando getaway**!
+        `,
+        shortDescription: "9-bedroom themed home with private pool, spa, and game room, minutes from Disney.",
+        price: "From $499/night",
+        bedrooms: 9,
+        bathrooms: 6,
+        sqft: 4000,
+        maxGuests: 18,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Heated Pool & Spa",
+            "Themed Bedrooms",
+            "Game Room with Arcade & Family Games",
+            "Fully-Equipped Kitchen",
+            "Smart TVs in Every Room",
+            "High-Speed WiFi",
+            "Outdoor Lounge & BBQ Area",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Local Attractions"
+        ],
+        images: [
+            {
+                url: "/images/property10-main.jpg",
+                alt: "Brand new 9-bedroom themed vacation home with private pool and spa"
+            },
+            {
+                url: "/images/property10-game-room.jpg",
+                alt: "Exciting game room with arcade games and entertainment"
+            }
+        ],
+        location: {
+            area: "Kissimmee, FL",
+            walkToAttractions: "Short drive to Disney & Local Attractions",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (15 min drive)",
+                "Universal Studios (30 min drive)",
+                "Shingle Creek Regional Park (8 min walk)",
+                "Give Kids the World Village (11 min walk)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/3569205-dateless.kM4WQzM",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
     }
+    ,
+    {
+        id: 11,
+        rank: 11,
+        rating: 5,
+        reviews: 10,
+        title: "Toy Story-Themed 8BR Home | Private Pool, Spa & Game Room – Kissimmee, FL",
+        description: `
+        Experience **Disney magic** in this **8-bedroom, 5-bathroom Toy Story-themed vacation home** in Kissimmee, FL! Designed for **families and large groups**, this **spacious retreat sleeps up to 22 guests** and features a **private heated pool & spa, themed bedrooms, and a fun-packed game room**.
+        
+        Unwind in the **Toy Story-inspired room**, challenge friends to **pool and arcade games in the game room**, or enjoy a family dinner in the **fully-equipped kitchen and open-concept living area**. The **private pool and spa** offer the perfect spot to relax under the Florida sun.
+        
+        Located just **minutes from Disney World, Universal Studios, and local entertainment**, this home is the **ultimate vacation getaway for families and Disney fans!**
+        `,
+        shortDescription: "8-bedroom Toy Story-themed home with private pool, spa, and game room near Disney.",
+        price: "From $499/night",
+        bedrooms: 8,
+        bathrooms: 5,
+        sqft: 3500,
+        maxGuests: 22,
+        maxPets: 2,
+        petFee: "$150 per pet per stay",
+        amenities: [
+            "Private Heated Pool & Spa",
+            "Toy Story-Themed Bedroom",
+            "Game Room with Pool Table & Arcade Games",
+            "Fully-Equipped Kitchen",
+            "High-Speed WiFi",
+            "Smart TVs in Every Room",
+            "Outdoor Lounge & BBQ Grill",
+            "Washer & Dryer",
+            "Air Conditioning",
+            "Free Parking",
+            "Short Drive to Disney & Local Attractions"
+        ],
+        images: [
+            {
+                url: "/images/property11-main.jpg",
+                alt: "Toy Story-themed vacation home with private pool and spa"
+            },
+            {
+                url: "/images/property11-game-room.jpg",
+                alt: "Exciting game room with pool table and arcade games"
+            }
+        ],
+        location: {
+            area: "Kissimmee, FL",
+            walkToAttractions: "Short drive to Disney & Local Attractions",
+            nearbyAttractions: [
+                "Walt Disney World® Resort (15 min drive)",
+                "Universal Studios (30 min drive)",
+                "Shingle Creek Regional Park (1 min walk)",
+                "Capone’s Dinner Show (8 min drive)"
+            ]
+        },
+        vrboLink: "https://vrbo.com/affiliates/3074776-dateless.N5c1gFf",
+        petPolicy: `
+        Maximum 2 pets  
+        $150 pet fee per pet per stay  
+        Must be approved (submit weight, breed, and age for approval)  
+        Pets must be house-trained  
+        Current vaccination records required
+        `
+    }   
 ,
-    {
-      id: 12,
-      rank: 12,
-      rating: 4.8,
-      reviews: 89,
-      title: "The Great Escape - Private Pool, Steps to the Beach!",
-      description: `
-          Newly renovated, "The Great Escape" is a charming 3-bedroom, 2-bath beach cottage located in Destin's Crystal Beach community. Just 1.5 blocks from the pristine Emerald Coast beaches, this home is an ideal retreat for families and couples alike.
-          
-          Enjoy vaulted ceilings and a retractable glass wall that seamlessly blends indoor and outdoor living, overlooking your private pool and lush backyard. The home features two king bedrooms, a bunk room perfect for kids, and a fully equipped kitchen with quartz countertops and stainless appliances. 
-          
-          Conveniently situated near Henderson Beach State Park, Destin Commons, restaurants, and family attractions, this beach cottage offers everything you need for a relaxing and memorable getaway.
-      `,
-      shortDescription: "Charming 3-bedroom cottage with a private pool, steps to the beach, and modern amenities.",
-      price: "From $362/night",
-      bedrooms: 3,
-      bathrooms: 2,
-      sqft: "1,450 sq ft",
-      maxGuests: 8,
-      maxPets: "Dogs under 50 lbs (limit 2, with approval)",
-      petFee: "$200 cleaning fee; $150 pool heating fee (optional)",
-      amenities: [
-          "Private Heated Pool & Patio",
-          "Fully Equipped Kitchen with Quartz Countertops",
-          "Spacious Open Floor Plan with Vaulted Ceilings",
-          "Outdoor Dining & Lounge Area",
-          "Pet-Friendly (Dogs under 50 lbs)",
-          "Walking Distance to the Beach (1.5 Blocks)",
-          "Washer & Dryer for Guest Use",
-          "High-Speed WiFi & Smart TVs"
-      ],
-      images: [
-          {
-              url: "/images/property12-main.jpg",
-              alt: "Private pool and lush backyard with lounge seating"
-          },
-          {
-              url: "/images/property-greatescape-living.jpg",
-              alt: "Spacious living room with vaulted ceilings and modern furnishings"
-          }
-      ],
-      location: {
-          area: "Crystal Beach, Destin, FL",
-          walkToBeach: "7-minute walk (1.5 blocks)",
-          nearbyAttractions: [
-              "Henderson Beach State Park (6 min walk)",
-              "Destin Commons (5 min drive)",
-              "Big Kahuna's Water Park (10 min drive)"
-          ]
-      },
-      vrboLink: "https://vrbo.com/affiliate/DjlOAQy",
-      petPolicy: `
-          Dogs under 50 lbs allowed (limit 2, with approval)
-          $200 cleaning fee applies
-          Pool heating available for $150 per week (upon request)
-          Guests responsible for cleaning up after pets
-      `      
-    }
+{
+    id: 12,
+    rank: 12,
+    rating: 5,
+    reviews: 57,
+    title: "Disney-Themed 5BR Resort Home | Game Room, Pool & Spa – Davenport, FL",
+    description: `
+    Experience the perfect **family getaway** in this **5-bedroom, 5-bathroom Disney-themed resort home** in Davenport, FL! This **spacious 2,500 sq. ft. retreat** offers a **private pool, spa, and an exciting game room**, making it an ideal vacation spot for families and groups.
+    
+    Enjoy a **fully-equipped kitchen, open-concept living space, and themed bedrooms** designed for comfort and fun. The **game room features arcade-style entertainment**, while the **outdoor lounge, BBQ grill, and private pool & spa** provide the perfect setting to unwind.
+    
+    Located just **minutes from Disney World, top golf courses, and Orlando attractions**, this home offers **resort-style amenities and a magical stay for all ages!**
+    `,
+    shortDescription: "5-bedroom Disney-themed resort home with game room, pool, and spa near Orlando attractions.",
+    price: "From $299/night",
+    bedrooms: 5,
+    bathrooms: 5,
+    sqft: 2500,
+    maxGuests: 11,
+    maxPets: 2,
+    petFee: "$150 per pet per stay",
+    amenities: [
+        "Private Heated Pool & Spa",
+        "Disney-Themed Bedrooms",
+        "Game Room with Arcade & Family Games",
+        "Fully-Equipped Kitchen",
+        "High-Speed WiFi",
+        "Smart TVs in Every Room",
+        "Outdoor Lounge & BBQ Grill",
+        "Washer & Dryer",
+        "Air Conditioning",
+        "Resort-Style Amenities (Pool, Gym, Playground)",
+        "Free Parking",
+        "Short Drive to Disney & Golf Courses"
+    ],
+    images: [
+        {
+            url: "/images/property12-main.jpg",
+            alt: "Disney-themed 5-bedroom resort home with private pool and game room"
+        },
+        {
+            url: "/images/property12-game-room.jpg",
+            alt: "Exciting game room with arcade games and entertainment"
+        }
+    ],
+    location: {
+        area: "Davenport, FL",
+        walkToAttractions: "Short drive to Disney & Golf Courses",
+        nearbyAttractions: [
+            "Walt Disney World® Resort (15 min drive)",
+            "Universal Studios (35 min drive)",
+            "ChampionsGate Golf Club (6 min drive)",
+            "Reunion Resort Golf Course (12 min drive)"
+        ]
+    },
+    vrboLink: "https://vrbo.com/affiliates/vrbo-usa.55Yfqzx",
+    petPolicy: `
+    Maximum 2 pets  
+    $150 pet fee per pet per stay  
+    Must be approved (submit weight, breed, and age for approval)  
+    Pets must be house-trained  
+    Current vaccination records required
+    `
+}
   ];
   
   
