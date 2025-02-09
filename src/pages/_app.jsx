@@ -17,23 +17,23 @@ export default function App({ Component, pageProps }) {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:url" content="https://magickindomhouse.com/" />
         <meta property="og:title" content="Orlando Vacation Rentals Near Disney World | Luxury Family Homes" />
         <meta property="og:description" content="Spacious vacation homes just minutes from Disney World. Save 30-50% vs. Disney hotels. Private pools, game rooms, and full kitchens. Perfect for families!" />
         <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://yourwebsite.com/" />
+        <meta property="twitter:url" content="https://magickindomhouse.com/" />
         <meta property="twitter:title" content="Orlando Vacation Rentals Near Disney World | Luxury Family Homes" />
         <meta property="twitter:description" content="Spacious vacation homes just minutes from Disney World. Save 30-50% vs. Disney hotels. Private pools, game rooms, and full kitchens. Perfect for families!" />
         <meta property="twitter:image" content="https://yourwebsite.com/images/twitter-image.jpg" />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Additional SEO Tags */}
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
         <meta name="author" content="Your Company Name" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://yourwebsite.com/" />
+        <link rel="canonical" href="https://magickindomhouse.com/" />
 
         {/* Additional Meta Tags for Rich Results */}
         <script type="application/ld+json">
@@ -88,7 +88,7 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head>
       <Component {...pageProps} />
-      <GoogleAnalytics gaId="G-7BPJ4PFTW5" />
+      <GoogleAnalytics gaId="G-6N6W27YQQC" />
     </>
   )
 }
