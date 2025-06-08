@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /waitlist/{document=**} {
+      allow read: if false;  // No one can read the waitlist entries
+      allow write: if true;  // Anyone can write to the waitlist
+                            // You might want to add rate limiting in production
+    }
+  }
+} 
