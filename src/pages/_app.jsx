@@ -11,23 +11,23 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Primary Meta Tags */}
-        <title>Orlando Vacation Rentals Near Disney World | Luxury Family Homes</title>
-        <meta name="title" content="Orlando Vacation Rentals Near Disney World | Luxury Family Homes" />
-        <meta name="description" content="Spacious vacation homes just minutes from Disney World. Save 30-50% vs. Disney hotels. Private pools, game rooms, and full kitchens. Perfect for families!" />
+        <title>Finding Better University - Learn from Real Experiences</title>
+        <meta name="title" content="Finding Better University - Learn from Real Experiences" />
+        <meta name="description" content="A curated marketplace of life-changing courses taught by real people who have achieved the 'better' you're looking for—in careers, relationships, money, health, and life." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://magickindomhouse.com/" />
-        <meta property="og:title" content="Orlando Vacation Rentals Near Disney World | Luxury Family Homes" />
-        <meta property="og:description" content="Spacious vacation homes just minutes from Disney World. Save 30-50% vs. Disney hotels. Private pools, game rooms, and full kitchens. Perfect for families!" />
-        <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg" />
+        <meta property="og:url" content="https://finding-better-university.vercel.app/" />
+        <meta property="og:title" content="Finding Better University - Learn from Real Experiences" />
+        <meta property="og:description" content="A curated marketplace of life-changing courses taught by real people who have achieved the 'better' you're looking for—in careers, relationships, money, health, and life." />
+        <meta property="og:image" content="/og-image.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://magickindomhouse.com/" />
-        <meta property="twitter:title" content="Orlando Vacation Rentals Near Disney World | Luxury Family Homes" />
-        <meta property="twitter:description" content="Spacious vacation homes just minutes from Disney World. Save 30-50% vs. Disney hotels. Private pools, game rooms, and full kitchens. Perfect for families!" />
-        <meta property="twitter:image" content="https://yourwebsite.com/images/twitter-image.jpg" />
+        <meta property="twitter:url" content="https://finding-better-university.vercel.app/" />
+        <meta property="twitter:title" content="Finding Better University - Learn from Real Experiences" />
+        <meta property="twitter:description" content="A curated marketplace of life-changing courses taught by real people who have achieved the 'better' you're looking for—in careers, relationships, money, health, and life." />
+        <meta property="twitter:image" content="/og-image.jpg" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" />
@@ -37,52 +37,32 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Additional SEO Tags */}
-        <meta name="keywords" content="disney world vacation rentals, orlando vacation homes, near disney world, family vacation rentals, disney area villas, universal studios nearby, orlando theme park accommodation" />
+        <meta name="keywords" content="online courses, real experiences, personal development, career growth, finding better podcast, life improvement, success stories, learning platform" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
-        <meta name="author" content="Your Company Name" />
+        <meta name="author" content="Finding Better University" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://magickindomhouse.com/" />
+        <link rel="canonical" href="https://finding-better-university.vercel.app/" />
 
         {/* Additional Meta Tags for Rich Results */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "LodgingBusiness",
-              "name": "Orlando Vacation Homes Near Disney",
-              "description": "Luxury vacation rentals minutes from Disney World and Universal Studios Orlando.",
-              "priceRange": "$$",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Orlando",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-              },
+              "@type": "EducationalOrganization",
+              "name": "Finding Better University",
+              "description": "A curated marketplace of life-changing courses taught by real people who have achieved success in various aspects of life.",
+              "url": "https://finding-better-university.vercel.app",
+              "sameAs": [
+                "https://www.youtube.com/@FindingBetterPodcast"
+              ],
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
-                "reviewCount": "150"
-              },
-              "amenityFeature": [
-                {
-                  "@type": "LocationFeatureSpecification",
-                  "name": "Private Pool",
-                  "value": true
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  "name": "Free WiFi",
-                  "value": true
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  "name": "Kitchen",
-                  "value": true
-                }
-              ]
+                "reviewCount": "100"
+              }
             }
           `}
         </script>

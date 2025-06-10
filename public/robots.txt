@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://yourwebsite.com/sitemap.xml
+Sitemap: https://finding-better-university.vercel.app/sitemap.xml
 
 # Disallow crawling of private or admin areas
 Disallow: /api/
@@ -17,13 +17,13 @@ Disallow: /*?*filter=
 Disallow: /*?*sort=
 
 # Allow crawling of important content directories
-Allow: /properties/
-Allow: /amenities/
 Allow: /about/
-Allow: /contact/
+Allow: /how-it-works/
+Allow: /benefits/
+Allow: /waitlist/
 Allow: /blog/
 
-# Crawl delay to prevent server overload (optional)
+# Crawl delay to prevent server overload
 Crawl-delay: 1
 
 # Additional crawler-specific rules
@@ -32,8 +32,6 @@ Allow: /
 
 User-agent: Googlebot-Image
 Allow: /images/
-Allow: /photos/
-Allow: /properties/
 
 User-agent: Bingbot
 Allow: /

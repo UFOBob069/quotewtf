@@ -1,7 +1,8 @@
 {
-  "name": "rental-site",
+  "name": "finding-better-university",
   "version": "0.1.0",
   "private": true,
+  "description": "A platform for sharing wisdom and helping others live better lives through high-quality online courses.",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
