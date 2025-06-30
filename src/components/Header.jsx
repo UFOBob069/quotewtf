@@ -16,33 +16,30 @@ export default function Header() {
     <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-lg md:text-xl font-semibold text-gray-800">
-            Finding Better University
+          <Link href="/" className="text-lg md:text-xl font-bold text-orange-600">
+            QuoteWTF
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#about" className="text-gray-600 hover:text-gray-900 transition">
-              About
-            </Link>
-            <Link href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition">
+            <Link href="#how-it-works" className="text-gray-600 hover:text-orange-600 transition">
               How It Works
             </Link>
-            <Link href="#contact" className="text-gray-600 hover:text-gray-900 transition">
-              Contact
+            <Link href="#benefits" className="text-gray-600 hover:text-orange-600 transition">
+              Why QuoteWTF
             </Link>
             <button 
               onClick={scrollToWaitlist}
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+              className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition"
             >
-              Join Waitlist
+              Subscribe
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+            className="md:hidden p-2 text-gray-600 hover:text-orange-600 focus:outline-none"
           >
             <span className="sr-only">Open menu</span>
             {!isMenuOpen ? (
@@ -62,31 +59,24 @@ export default function Header() {
           <div className="md:hidden absolute left-0 right-0 top-full bg-white border-b border-gray-100 px-4 py-2 shadow-lg">
             <div className="flex flex-col gap-4 py-2">
               <Link 
-                href="#about" 
-                className="text-gray-600 hover:text-gray-900 transition py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
                 href="#how-it-works" 
-                className="text-gray-600 hover:text-gray-900 transition py-2"
+                className="text-gray-600 hover:text-orange-600 transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 How It Works
               </Link>
               <Link 
-                href="#contact" 
-                className="text-gray-600 hover:text-gray-900 transition py-2"
+                href="#benefits" 
+                className="text-gray-600 hover:text-orange-600 transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                Why QuoteWTF
               </Link>
               <button 
                 onClick={scrollToWaitlist}
-                className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition w-full"
+                className="bg-orange-600 text-white px-6 py-3 rounded-full hover:bg-orange-700 transition w-full"
               >
-                Join Waitlist
+                Subscribe
               </button>
             </div>
           </div>

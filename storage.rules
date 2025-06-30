@@ -1,0 +1,14 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow uploads to quotes folder
+    match /quotes/{allPaths=**} {
+      allow read, write: if true; // For MVP, allow all access
+    }
+    
+    // Allow uploads to test folder
+    match /test/{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+} 
