@@ -225,15 +225,16 @@ export default function Hero() {
           </div>
           <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Is This Quote Legit… or Total BS?
+              WTF Did You Just Get Quoted?
             </h1>
             <p className="text-lg text-orange-600 font-semibold mb-2">
-              Upload a contractor quote (PDF or image) and our AI will roast it — breaking down red flags, missing details, and overpriced fluff in plain English. No fluff. Just facts. Maybe some fire. 🔥
+              Upload your contractor's quote and let our AI break it down: what's overpriced, what's missing, and what's just BS.<br/>
+              Get a grade, red flags, smart questions to ask, and advice — instantly.
             </p>
           </div>
           <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">
-              Drop your quote below to find out if you're getting a deal…<br/>or getting played. 💸
+              📄 PDF or image → 🔍 AI analysis → 🧠 Smart decisions
             </p>
           </div>
 
@@ -343,6 +344,25 @@ export default function Hero() {
           )}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style={{ animationDelay: '0.8s' }}>
+            {isSubmitting && (
+              <div className="w-full max-w-md mx-auto mb-8">
+                <div className="flex flex-col items-center justify-center mb-2">
+                  <span className="text-orange-600 font-semibold text-lg mb-2">Analyzing your quote for red flags and hidden fees…</span>
+                </div>
+                <div className="w-full bg-orange-100 rounded-full h-3 overflow-hidden">
+                  <div className="bg-orange-500 h-3 rounded-full animate-progress-bar" style={{ width: '100%' }}></div>
+                </div>
+                <style>{`
+                  @keyframes progress-bar {
+                    0% { width: 0%; }
+                    100% { width: 100%; }
+                  }
+                  .animate-progress-bar {
+                    animation: progress-bar 2.5s linear infinite;
+                  }
+                `}</style>
+              </div>
+            )}
             <button 
               onClick={analyzeQuote}
               disabled={!file || !validateZip(zipCode) || isSubmitting}
@@ -357,7 +377,7 @@ export default function Hero() {
                   Roasting...
                 </span>
               ) : (
-                <span className="relative z-10">Roast My Quote 🔥</span>
+                <span className="relative z-10">Is This BS?</span>
               )}
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </button>

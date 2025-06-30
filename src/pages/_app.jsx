@@ -11,23 +11,23 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Primary Meta Tags */}
-        <title>Finding Better University - Learn from Real Experiences</title>
-        <meta name="title" content="Finding Better University - Learn from Real Experiences" />
-        <meta name="description" content="A curated marketplace of life-changing courses taught by real people who have achieved the 'better' you're looking for—in careers, relationships, money, health, and life." />
+        <title>QuoteWTF - Is This Quote Legit… or Total BS?</title>
+        <meta name="title" content="QuoteWTF - Is This Quote Legit… or Total BS?" />
+        <meta name="description" content="Upload a contractor quote (PDF or image) and our AI will roast it — breaking down red flags, missing details, and overpriced fluff in plain English. No fluff. Just facts. Maybe some fire. 🔥" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://finding-better-university.vercel.app/" />
-        <meta property="og:title" content="Finding Better University - Learn from Real Experiences" />
-        <meta property="og:description" content="A curated marketplace of life-changing courses taught by real people who have achieved the 'better' you're looking for—in careers, relationships, money, health, and life." />
+        <meta property="og:url" content="https://quotewtf.vercel.app/" />
+        <meta property="og:title" content="QuoteWTF - Is This Quote Legit… or Total BS?" />
+        <meta property="og:description" content="Upload a contractor quote (PDF or image) and our AI will roast it — breaking down red flags, missing details, and overpriced fluff in plain English. No fluff. Just facts. Maybe some fire. 🔥" />
         <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:site_name" content="QuoteWTF" />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://finding-better-university.vercel.app/" />
-        <meta property="twitter:title" content="Finding Better University - Learn from Real Experiences" />
-        <meta property="twitter:description" content="A curated marketplace of life-changing courses taught by real people who have achieved the 'better' you're looking for—in careers, relationships, money, health, and life." />
-        <meta property="twitter:image" content="/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="QuoteWTF - Is This Quote Legit… or Total BS?" />
+        <meta name="twitter:description" content="Upload a contractor quote (PDF or image) and our AI will roast it — breaking down red flags, missing details, and overpriced fluff in plain English. No fluff. Just facts. Maybe some fire. 🔥" />
+        <meta name="twitter:image" content="/og-image.jpg" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" />
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
         <meta name="author" content="Finding Better University" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://finding-better-university.vercel.app/" />
+        <link rel="canonical" href="https://quotewtf.vercel.app/" />
 
         {/* Additional Meta Tags for Rich Results */}
         <script type="application/ld+json">
@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }) {
               "@type": "EducationalOrganization",
               "name": "Finding Better University",
               "description": "A curated marketplace of life-changing courses taught by real people who have achieved success in various aspects of life.",
-              "url": "https://finding-better-university.vercel.app",
+              "url": "https://quotewtf.vercel.app",
               "sameAs": [
                 "https://www.youtube.com/@FindingBetterPodcast"
               ],
@@ -68,7 +68,7 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head>
       <Component {...pageProps} />
-      <GoogleAnalytics gaId="G-6N6W27YQQC" />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
     </>
   )
 }
