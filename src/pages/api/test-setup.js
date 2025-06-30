@@ -1,7 +1,9 @@
-import { db, storage } from '../../lib/firebase';
+// Remove unused imports
+// import { db, storage } from '../../lib/firebase';
+import { db } from '../../lib/firebase';
+// import { ref } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';
-import { ref } from 'firebase/storage';
-import OpenAI from 'openai';
+// import OpenAI from 'openai';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -38,16 +40,14 @@ export default async function handler(req, res) {
     // Test OpenAI
     try {
       if (process.env.OPENAI_API_KEY) {
-        const openai = new OpenAI({
-          apiKey: process.env.OPENAI_API_KEY,
-        });
-        
+        // const openai = new OpenAI({
+        //   apiKey: process.env.OPENAI_API_KEY,
+        // });
         // const completion = await openai.chat.completions.create({
         //   model: "gpt-3.5-turbo",
         //   messages: [{ role: "user", content: "Say 'Hello from QuoteWTF!'" }],
         //   max_tokens: 10,
         // });
-        
         testResults.openai = true;
       }
     } catch (error) {
