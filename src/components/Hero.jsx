@@ -225,13 +225,15 @@ export default function Hero() {
           </div>
           <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Let's roast this quote! <span role="img" aria-label="fire">🔥</span>
+              Is This Quote Legit… or Total BS?
             </h1>
-            <p className="text-lg text-orange-600 font-semibold mb-2">Upload your contractor's quote and let our AI call out the BS, red flags 🚩, and overpriced fluff!</p>
+            <p className="text-lg text-orange-600 font-semibold mb-2">
+              Upload a contractor quote (PDF or image) and our AI will roast it — breaking down red flags, missing details, and overpriced fluff in plain English. No fluff. Just facts. Maybe some fire. 🔥
+            </p>
           </div>
           <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">
-              Upload any quote — PDF or image — and get instant feedback from our AI. No fluff. No BS. Just savage analysis that calls out vague contractor BS and overpriced fluff. <span role="img" aria-label="detective">🕵️‍♂️</span>
+              Drop your quote below to find out if you're getting a deal…<br/>or getting played. 💸
             </p>
           </div>
 
