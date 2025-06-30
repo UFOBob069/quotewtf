@@ -4,7 +4,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendAnalysisEmail(email, analysis, fileName) {
   try {
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'QuoteWTF <noreply@quotewtf.com>',
       to: [email],
       subject: `🔥 Your QuoteWTF Analysis: ${fileName}`,

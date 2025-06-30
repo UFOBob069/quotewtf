@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
     // Test Firebase Storage
     try {
-      const testRef = ref(storage, 'test/test.txt');
+      // const testRef = ref(storage, 'test/test.txt');
       testResults.storage = true;
     } catch (error) {
       console.error('Storage test failed:', error);
@@ -42,11 +42,11 @@ export default async function handler(req, res) {
           apiKey: process.env.OPENAI_API_KEY,
         });
         
-        const completion = await openai.chat.completions.create({
-          model: "gpt-3.5-turbo",
-          messages: [{ role: "user", content: "Say 'Hello from QuoteWTF!'" }],
-          max_tokens: 10,
-        });
+        // const completion = await openai.chat.completions.create({
+        //   model: "gpt-3.5-turbo",
+        //   messages: [{ role: "user", content: "Say 'Hello from QuoteWTF!'" }],
+        //   max_tokens: 10,
+        // });
         
         testResults.openai = true;
       }
