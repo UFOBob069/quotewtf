@@ -54,7 +54,9 @@ export default async function handler(req, res) {
           extractedText = pdfData.text;
         } else if (file.mimetype.startsWith('image/')) {
           // Process image with OCR
-          const result = await Tesseract.recognize(file.buffer, 'eng');
+          const result = await Tesseract.recognize(file.buffer, 'eng', {
+            corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.0.0/tesseract-core-simd.wasm.js'
+          });
           extractedText = result.data.text;
         } else {
           return res.status(400).json({ error: 'Unsupported file type' });
