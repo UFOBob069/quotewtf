@@ -7,6 +7,7 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 export const config = {
   api: {
     bodyParser: false,
+    responseLimit: false,
   },
 };
 
@@ -66,9 +67,25 @@ export default async function handler(req, res) {
           console.log('[UPLOAD] PDF text extraction complete. Length:', extractedText.length);
         } else if (file.mimetype.startsWith('image/')) {
           console.log('[UPLOAD] Extracting text from image with Tesseract...');
-          const result = await Tesseract.recognize(file.buffer, 'eng', {
-            corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.0.0/tesseract-core-simd.wasm.js'
+          
+          // Configure Tesseract to use CDN for WASM files
+          Tesseract.setLogging(true);
+          
+          // Add timeout wrapper for Tesseract processing
+          const tesseractPromise = Tesseract.recognize(file.buffer, 'eng', {
+            logger: m => console.log('[TESSERACT]', m),
+            workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/worker.min.js',
+            corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.0.0/tesseract-core-simd.wasm.js',
+            langPath: 'https://tessdata.projectnaptha.com/4.0.0'
           });
+          
+          // Set a 60-second timeout for OCR processing
+          const timeoutPromise = new Promise((_, reject) => {
+            setTimeout(() => reject(new Error('OCR processing timeout')), 60000);
+          });
+          
+          const result = await Promise.race([tesseractPromise, timeoutPromise]);
+          
           extractedText = result.data.text;
           console.log('[UPLOAD] Image OCR complete. Length:', extractedText.length);
         } else {
