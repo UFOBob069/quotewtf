@@ -1,5 +1,7 @@
 // components/Hero.jsx
 import { useState } from 'react';
+import { storage } from '../lib/firebase';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 function highlightSections(text) {
   // Clean up and structure the output
@@ -71,13 +73,13 @@ export default function Hero() {
 
   const handleFile = (selectedFile) => {
     const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
-    const maxSize = 25 * 1024 * 1024; // 25MB
+    const maxSize = 50 * 1024 * 1024; // 50MB (Firebase Storage limit is much higher)
     if (!allowedTypes.includes(selectedFile.type)) {
       alert('Please upload a PDF, JPG, or PNG file.');
       return;
     }
     if (selectedFile.size > maxSize) {
-      alert('File size must be less than 25MB.');
+      alert('File size must be less than 50MB.');
       return;
     }
     setFile(selectedFile);
@@ -104,22 +106,40 @@ export default function Hero() {
     setAnalysisResult(null);
     setShowConfetti(false);
     try {
-      // Upload file and extract text
-      const formData = new FormData();
-      formData.append('file', file);
-      const uploadResponse = await fetch('/api/upload-file', {
+      // Upload file directly to Firebase Storage
+      console.log('[FRONTEND] Uploading file to Firebase Storage...');
+      const timestamp = Date.now();
+      const fileName = `${timestamp}_${file.name}`;
+      const storageRef = ref(storage, `quotes/${fileName}`);
+      
+      await uploadBytes(storageRef, file);
+      const fileUrl = await getDownloadURL(storageRef);
+      console.log('[FRONTEND] File uploaded to Firebase:', fileUrl);
+
+      // Process file for text extraction
+      console.log('[FRONTEND] Processing file for text extraction...');
+      const processResponse = await fetch('/api/process-file', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fileUrl,
+          fileName: file.name,
+          fileType: file.type,
+        }),
       });
-      if (!uploadResponse.ok) {
-        throw new Error('File upload failed');
+      
+      if (!processResponse.ok) {
+        throw new Error('File processing failed');
       }
-      const { text: quoteText, fileUrl, fileName } = await uploadResponse.json();
+      
+      const { text: quoteText } = await processResponse.json();
       if (!quoteText || quoteText.trim().length < 10) {
         alert('Could not extract enough text from the file. Please try a clearer image or PDF.');
         return;
       }
+
       // Analyze with AI
+      console.log('[FRONTEND] Analyzing with AI...');
       const analysisResponse = await fetch('/api/analyze-quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -128,13 +148,15 @@ export default function Hero() {
           email: email.trim() ? email : undefined,
           zipCode,
           specificQuestions,
-          fileName,
+          fileName: file.name,
           fileUrl,
         }),
       });
+      
       if (!analysisResponse.ok) {
         throw new Error('Analysis failed');
       }
+      
       const { analysis, message } = await analysisResponse.json();
       if (analysis && /red flag|🚩|red flag/i.test(analysis)) {
         setShowConfetti(true);
@@ -144,9 +166,10 @@ export default function Hero() {
         analysis,
         message,
         email,
-        fileName,
+        fileName: file.name,
       });
     } catch (error) {
+      console.error('[FRONTEND] Analysis error:', error);
       setAnalysisResult({
         analysis: null,
         message: 'Analysis failed. Please try again.',

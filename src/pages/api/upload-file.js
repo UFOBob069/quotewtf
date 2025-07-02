@@ -8,13 +8,12 @@ export const config = {
   api: {
     bodyParser: false,
     responseLimit: false,
-    runtime: 'edge',
   },
 };
 
 const upload = multer({
   storage: multer.memoryStorage(),
-  limits: { fileSize: 25 * 1024 * 1024 }, // 25MB (under Edge runtime's 32MB limit)
+  limits: { fileSize: 4 * 1024 * 1024 }, // 4MB (back to Vercel's limit)
 });
 
 export default async function handler(req, res) {
