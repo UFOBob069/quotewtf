@@ -82,6 +82,7 @@ export default function Hero() {
       alert('File size must be less than 50MB.');
       return;
     }
+
     setFile(selectedFile);
   };
 

@@ -1,5 +1,5 @@
 import pdf from 'pdf-parse';
-import Tesseract from 'tesseract.js';
+import { createWorker } from 'tesseract.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -34,30 +34,29 @@ export default async function handler(req, res) {
       extractedText = pdfData.text;
       console.log('[PROCESS] PDF text extraction complete. Length:', extractedText.length);
     } else if (fileType.startsWith('image/')) {
-      console.log('[PROCESS] Extracting text from image with Tesseract...');
+      console.log('[PROCESS] Extracting text from image with Tesseract.js CDN build...');
+      
+      // Create worker with CDN configuration
+      const worker = await createWorker({
+        langPath: 'https://tessdata.projectnaptha.com/4.0.0',
+        corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@2.1.0/tesseract-core-simd.js',
+        workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/worker.min.js',
+        logger: m => console.log('[TESSERACT]', m)
+      });
       
       try {
-        // Try a simpler Tesseract configuration first
-        const result = await Tesseract.recognize(Buffer.from(buffer), 'eng', {
-          logger: m => console.log('[TESSERACT]', m),
-        });
+        // Load English language
+        await worker.loadLanguage('eng');
+        await worker.initialize('eng');
         
-        extractedText = result.data.text;
+        // Recognize text
+        const { data: { text } } = await worker.recognize(Buffer.from(buffer));
+        extractedText = text;
+        
         console.log('[PROCESS] Image OCR complete. Length:', extractedText.length);
-      } catch (tesseractError) {
-        console.error('[PROCESS] Tesseract error:', tesseractError);
-        
-        // Fallback: try with CDN configuration
-        console.log('[PROCESS] Trying Tesseract with CDN configuration...');
-        const result = await Tesseract.recognize(Buffer.from(buffer), 'eng', {
-          logger: m => console.log('[TESSERACT]', m),
-          workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/worker.min.js',
-          corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.0.0/tesseract-core-simd.wasm.js',
-          langPath: 'https://tessdata.projectnaptha.com/4.0.0'
-        });
-        
-        extractedText = result.data.text;
-        console.log('[PROCESS] Image OCR complete with CDN. Length:', extractedText.length);
+      } finally {
+        // Terminate worker to free resources
+        await worker.terminate();
       }
     } else {
       return res.status(400).json({ error: 'Unsupported file type' });
