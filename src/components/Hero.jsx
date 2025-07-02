@@ -71,13 +71,13 @@ export default function Hero() {
 
   const handleFile = (selectedFile) => {
     const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
-    const maxSize = 10 * 1024 * 1024; // 10MB
+    const maxSize = 25 * 1024 * 1024; // 25MB
     if (!allowedTypes.includes(selectedFile.type)) {
       alert('Please upload a PDF, JPG, or PNG file.');
       return;
     }
     if (selectedFile.size > maxSize) {
-      alert('File size must be less than 10MB.');
+      alert('File size must be less than 25MB.');
       return;
     }
     setFile(selectedFile);

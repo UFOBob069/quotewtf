@@ -8,12 +8,13 @@ export const config = {
   api: {
     bodyParser: false,
     responseLimit: false,
+    runtime: 'edge',
   },
 };
 
 const upload = multer({
   storage: multer.memoryStorage(),
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB
+  limits: { fileSize: 25 * 1024 * 1024 }, // 25MB (under Edge runtime's 32MB limit)
 });
 
 export default async function handler(req, res) {
@@ -29,6 +30,9 @@ export default async function handler(req, res) {
     upload.single('file')(req, res, async (err) => {
       if (err) {
         console.error('[UPLOAD] Multer error:', err);
+        if (err.code === 'LIMIT_FILE_SIZE') {
+          return res.status(413).json({ error: 'File too large. Please upload a file smaller than 25MB.' });
+        }
         return res.status(400).json({ error: 'File upload failed' });
       }
 
