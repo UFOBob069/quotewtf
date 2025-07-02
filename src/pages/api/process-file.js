@@ -36,26 +36,29 @@ export default async function handler(req, res) {
     } else if (fileType.startsWith('image/')) {
       console.log('[PROCESS] Extracting text from image with Tesseract...');
       
-      // Configure Tesseract to use CDN for WASM files
-      Tesseract.setLogging(true);
-      
-      // Add timeout wrapper for Tesseract processing
-      const tesseractPromise = Tesseract.recognize(Buffer.from(buffer), 'eng', {
-        logger: m => console.log('[TESSERACT]', m),
-        workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/worker.min.js',
-        corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.0.0/tesseract-core-simd.wasm.js',
-        langPath: 'https://tessdata.projectnaptha.com/4.0.0'
-      });
-      
-      // Set a 60-second timeout for OCR processing
-      const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('OCR processing timeout')), 60000);
-      });
-      
-      const result = await Promise.race([tesseractPromise, timeoutPromise]);
-      
-      extractedText = result.data.text;
-      console.log('[PROCESS] Image OCR complete. Length:', extractedText.length);
+      try {
+        // Try a simpler Tesseract configuration first
+        const result = await Tesseract.recognize(Buffer.from(buffer), 'eng', {
+          logger: m => console.log('[TESSERACT]', m),
+        });
+        
+        extractedText = result.data.text;
+        console.log('[PROCESS] Image OCR complete. Length:', extractedText.length);
+      } catch (tesseractError) {
+        console.error('[PROCESS] Tesseract error:', tesseractError);
+        
+        // Fallback: try with CDN configuration
+        console.log('[PROCESS] Trying Tesseract with CDN configuration...');
+        const result = await Tesseract.recognize(Buffer.from(buffer), 'eng', {
+          logger: m => console.log('[TESSERACT]', m),
+          workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/worker.min.js',
+          corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.0.0/tesseract-core-simd.wasm.js',
+          langPath: 'https://tessdata.projectnaptha.com/4.0.0'
+        });
+        
+        extractedText = result.data.text;
+        console.log('[PROCESS] Image OCR complete with CDN. Length:', extractedText.length);
+      }
     } else {
       return res.status(400).json({ error: 'Unsupported file type' });
     }
@@ -73,6 +76,10 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('[PROCESS] Processing error:', error);
-    res.status(500).json({ error: 'File processing failed: ' + error.message });
+    console.error('[PROCESS] Error stack:', error.stack);
+    res.status(500).json({ 
+      error: 'File processing failed: ' + error.message,
+      details: process.env.NODE_ENV === 'development' ? error.stack : undefined
+    });
   }
 } 
