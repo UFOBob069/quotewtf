@@ -14,8 +14,17 @@ export default async function handler(req, res) {
 
   const { quoteText, email, specificQuestions, fileName, fileUrl } = req.body;
 
-  if (!quoteText || !email) {
-    return res.status(400).json({ error: 'Missing required fields' });
+  console.log('[ANALYZE] Received request:', { 
+    hasQuoteText: !!quoteText, 
+    quoteTextLength: quoteText?.length,
+    hasEmail: !!email,
+    email: email,
+    fileName,
+    fileUrl 
+  });
+
+  if (!quoteText) {
+    return res.status(400).json({ error: 'Quote text is required' });
   }
 
   try {
@@ -69,7 +78,7 @@ export default async function handler(req, res) {
 
     // Store in Firebase
     await addDoc(collection(db, 'quote_analyses'), {
-      email,
+      email: email || null,
       fileName,
       fileUrl,
       quoteText,
@@ -79,8 +88,11 @@ export default async function handler(req, res) {
       status: 'completed'
     });
 
-    // Send email with results
-    const emailSent = await sendAnalysisEmail(email, analysis, fileName);
+    // Send email with results (only if email is provided)
+    let emailSent = false;
+    if (email && email.trim()) {
+      emailSent = await sendAnalysisEmail(email, analysis, fileName);
+    }
 
     res.status(200).json({ 
       success: true, 
@@ -95,7 +107,7 @@ export default async function handler(req, res) {
     // Store failed attempt
     try {
       await addDoc(collection(db, 'quote_analyses'), {
-        email,
+        email: email || null,
         fileName,
         fileUrl,
         quoteText,
