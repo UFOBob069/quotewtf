@@ -87,7 +87,10 @@ export default async function handler(req, res) {
         // The first element contains the entire text
         extractedText = visionResult.responses[0].textAnnotations[0].description;
         console.log('[PROCESS] Image OCR complete. Length:', extractedText.length);
-
+      } else {
+        console.log('[PROCESS] No text detected in image');
+        extractedText = '';
+      }
     } else {
       return res.status(400).json({ error: 'Unsupported file type' });
     }
