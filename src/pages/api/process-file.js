@@ -1,5 +1,4 @@
 import pdf from 'pdf-parse';
-import { createWorker } from 'tesseract.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -34,30 +33,61 @@ export default async function handler(req, res) {
       extractedText = pdfData.text;
       console.log('[PROCESS] PDF text extraction complete. Length:', extractedText.length);
     } else if (fileType.startsWith('image/')) {
-      console.log('[PROCESS] Extracting text from image with Tesseract.js CDN build...');
+      console.log('[PROCESS] Extracting text from image with Google Cloud Vision...');
       
-      // Create worker with CDN configuration
-      const worker = await createWorker({
-        langPath: 'https://tessdata.projectnaptha.com/4.0.0',
-        corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js-core@2.1.0/tesseract-core-simd.js',
-        workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/worker.min.js',
-        logger: m => console.log('[TESSERACT]', m)
+      // Check if Google Cloud Vision API key is configured
+      if (!process.env.GOOGLE_CLOUD_VISION_API_KEY) {
+        console.error('[PROCESS] Google Cloud Vision API key not configured');
+        return res.status(500).json({ 
+          error: 'Image processing is not configured. Please contact support.',
+          details: 'Google Cloud Vision API key missing'
+        });
+      }
+      
+      // Use fetch to call Google Cloud Vision API directly
+      const apiKey = process.env.GOOGLE_CLOUD_VISION_API_KEY;
+      const visionApiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
+      
+      // Convert buffer to base64
+      const imageBuffer = Buffer.from(buffer);
+      const base64Image = imageBuffer.toString('base64');
+      
+      // Prepare the request body
+      const requestBody = {
+        requests: [
+          {
+            image: {
+              content: base64Image,
+            },
+            features: [
+              {
+                type: 'TEXT_DETECTION',
+              },
+            ],
+          },
+        ],
+      };
+      
+      // Call Google Cloud Vision API
+      const visionResponse = await fetch(visionApiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
       });
       
-      try {
-        // Load English language
-        await worker.loadLanguage('eng');
-        await worker.initialize('eng');
-        
-        // Recognize text
-        const { data: { text } } = await worker.recognize(Buffer.from(buffer));
-        extractedText = text;
-        
-        console.log('[PROCESS] Image OCR complete. Length:', extractedText.length);
-      } finally {
-        // Terminate worker to free resources
-        await worker.terminate();
+      if (!visionResponse.ok) {
+        throw new Error(`Google Cloud Vision API error: ${visionResponse.statusText}`);
       }
+      
+      const visionResult = await visionResponse.json();
+      
+      if (visionResult.responses && visionResult.responses[0] && visionResult.responses[0].textAnnotations) {
+        // The first element contains the entire text
+        extractedText = visionResult.responses[0].textAnnotations[0].description;
+        console.log('[PROCESS] Image OCR complete. Length:', extractedText.length);
+
     } else {
       return res.status(400).json({ error: 'Unsupported file type' });
     }
