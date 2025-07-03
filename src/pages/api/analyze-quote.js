@@ -27,13 +27,22 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Quote text is required' });
   }
 
+  // With GPT-4 Turbo's 128K token limit, we can handle much larger texts
+  // Estimate: 1 token ≈ 4 characters, so 128K tokens ≈ 512K characters
+  const maxQuoteLength = 100000; // Conservative limit, well within 128K tokens
+  const truncatedQuoteText = quoteText.length > maxQuoteLength 
+    ? quoteText.substring(0, maxQuoteLength) + '\n\n[Text truncated due to extreme length. Analysis based on first ' + maxQuoteLength + ' characters.]'
+    : quoteText;
+    
+  console.log('[ANALYZE] Quote text length:', quoteText.length, '-> using:', truncatedQuoteText.length);
+
   try {
     // Create the AI prompt
     const prompt = `
     You're a savage home renovation expert who reviews contractor quotes with zero patience for BS. Your job is to sniff out vague language, hidden fees, inflated pricing, and missing scope details. Be blunt, funny, and brutally helpful — but never mean for the sake of it. Give advice the user can actually use.
     
     QUOTE TO ANALYZE:
-    ${quoteText}
+    ${truncatedQuoteText}
     
     ${specificQuestions ? `SPECIFIC QUESTIONS TO ADDRESS:
     ${specificQuestions}` : ''}
@@ -68,9 +77,9 @@ export default async function handler(req, res) {
 
     // Get AI analysis
     const completion = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-4-turbo-preview", // 128K token context window
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 1500,
+      max_tokens: 2000, // Increased since we have more context
       temperature: 0.7,
     });
 
@@ -81,7 +90,8 @@ export default async function handler(req, res) {
       email: email || null,
       fileName,
       fileUrl,
-      quoteText,
+      quoteText: truncatedQuoteText, // Store truncated version
+      originalQuoteTextLength: quoteText.length, // Store original length for reference
       specificQuestions,
       analysis,
       createdAt: serverTimestamp(),
@@ -110,7 +120,8 @@ export default async function handler(req, res) {
         email: email || null,
         fileName,
         fileUrl,
-        quoteText,
+        quoteText: truncatedQuoteText,
+        originalQuoteTextLength: quoteText.length,
         specificQuestions,
         error: error.message,
         createdAt: serverTimestamp(),
